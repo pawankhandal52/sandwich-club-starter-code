@@ -1,13 +1,28 @@
+/*
+
+ *Copyright (C) 2018 The Android Sandwich Project made under Udacity Nanodegree Course
+ 
+ */
+
 package com.udacity.sandwichclub;
 
 import android.content.Intent;
+
 import android.os.Bundle;
+
 import android.support.v7.app.AppCompatActivity;
+
 import android.view.View;
+
 import android.widget.AdapterView;
+
 import android.widget.ArrayAdapter;
+
 import android.widget.ListView;
 
+/**
+ * This the MainActivity class is used to show the list of sandwich
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
