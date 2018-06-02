@@ -20,29 +20,38 @@ import android.widget.ArrayAdapter;
 
 import android.widget.ListView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * This the MainActivity class is used to show the list of sandwich
  */
 public class MainActivity extends AppCompatActivity {
 
+    //LIST VIEW reference
+    @BindView(R.id.sandwiches_listview)ListView mListView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Setup butter knife
+        ButterKnife.bind(this);
         String[] sandwiches = getResources().getStringArray(R.array.sandwich_names);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, sandwiches);
 
         // Simplification: Using a ListView instead of a RecyclerView
-        ListView listView = findViewById(R.id.sandwiches_listview);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        //ListView listView = findViewById(R.id.sandwiches_listview);
+        mListView.setAdapter(adapter);
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 launchDetailActivity(position);
             }
         });
+        
+        
     }
 
     private void launchDetailActivity(int position) {

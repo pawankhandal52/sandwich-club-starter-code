@@ -27,6 +27,8 @@ import org.json.JSONException;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * This the DetailActivity class is used to show the details of sandwich
@@ -35,12 +37,17 @@ public class DetailActivity extends AppCompatActivity {
 
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
+    
+     @BindView(R.id.origin_text_tv) TextView placeOfOrigin;
+     @BindView(R.id.also_known_text_tv)TextView alsoKnownAs;
+     @BindView(R.id.ingredients_text_tv)TextView ingredients;
+     @BindView(R.id.description_text_tv)TextView description;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-
+        ButterKnife.bind(this);
         ImageView sandwichIv = findViewById(R.id.image_iv);
 
         Intent intent = getIntent();
@@ -75,7 +82,7 @@ public class DetailActivity extends AppCompatActivity {
 
         populateUI(sandwich);
         Picasso.with(this)
-                .load(sandwich.getImage())
+                .load(sandwich.getImage()).placeholder(R.mipmap.ic_launcher_round)
                 .into(sandwichIv);
 
         setTitle(sandwich.getMainName());
@@ -87,10 +94,7 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI(Sandwich sandwich) {
-        TextView placeOfOrigin = findViewById(R.id.origin_text_tv);
-        TextView alsoKnownAs = findViewById(R.id.also_known_text_tv);
-        TextView ingredients = findViewById(R.id.ingredients_text_tv);
-        TextView description = findViewById(R.id.description_text_tv);
+        
         if (sandwich.getPlaceOfOrigin().length()!=0){
             placeOfOrigin.setText(sandwich.getPlaceOfOrigin());
         }else{

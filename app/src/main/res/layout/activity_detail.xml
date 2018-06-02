@@ -28,7 +28,7 @@
             <ImageView
                 android:id="@+id/image_iv"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="@dimen/detail_activity_image_height"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/sandwich_picture_content_description"
                 android:scaleType="centerCrop" />
@@ -44,9 +44,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="@dimen/detail_activity_text_margin"
+                android:layout_marginLeft="@dimen/detail_activity_text_margin"
+                android:layout_marginTop="@dimen/detail_activity_text_margin"
                 android:text="@string/detail_place_of_origin_label"/>
 
             <!--Textview Place of origin Text-->
@@ -57,9 +57,9 @@
                 android:layout_below="@+id/image_iv"
                 android:layout_toRightOf="@+id/origin_tv"
                 android:layout_toEndOf="@+id/origin_tv"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginStart="@dimen/detail_activity_text_margin"
+                android:layout_marginTop="@dimen/detail_activity_text_margin"
+                android:layout_marginLeft="@dimen/detail_activity_text_margin"/>
 
             <!--Textview Also known as label-->
             <TextView
@@ -68,10 +68,10 @@
                 android:text="@string/detail_also_known_as_label"
                 android:textStyle="bold"
                 android:id="@+id/also_known_tv"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="@dimen/detail_activity_text_margin"
+                android:layout_marginLeft="@dimen/detail_activity_text_margin"
                 android:layout_below="@+id/origin_text_tv"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/detail_activity_text_margin"
                 />
 
             <!--Textview Also known as text-->
@@ -82,9 +82,9 @@
                 android:id="@+id/also_known_text_tv"
                 android:layout_toRightOf="@+id/also_known_tv"
                 android:layout_toEndOf="@+id/also_known_tv"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginStart="@dimen/detail_activity_text_margin"
+                android:layout_marginLeft="@dimen/detail_activity_text_margin"
+                android:layout_marginTop="@dimen/detail_activity_text_margin"/>
 
             <!--Textview ingredients label-->
             <TextView
@@ -93,9 +93,9 @@
                 android:text="@string/detail_ingredients_label"
                 android:id="@+id/detail_ingredients_tv"
                 android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginTop="@dimen/detail_activity_text_margin"
+                android:layout_marginStart="@dimen/detail_activity_small_text_margin"
+                android:layout_marginLeft="@dimen/detail_activity_small_text_margin"
                 android:layout_below="@+id/also_known_text_tv"/>
 
             <!--Textview ingredients text-->
@@ -106,9 +106,9 @@
                 android:id="@+id/ingredients_text_tv"
                 android:layout_toRightOf="@+id/detail_ingredients_tv"
                 android:layout_toEndOf="@+id/detail_ingredients_tv"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginTop="@dimen/detail_activity_text_margin"
+                android:layout_marginStart="@dimen/detail_activity_text_margin"
+                android:layout_marginLeft="@dimen/detail_activity_text_margin"/>
 
             <!--Textview Description-->
             <TextView
@@ -117,9 +117,9 @@
                 android:text="@string/detail_description_label"
                 android:id="@+id/description_tv"
                 android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginTop="@dimen/detail_activity_text_margin"
+                android:layout_marginStart="@dimen/detail_activity_small_text_margin"
+                android:layout_marginLeft="@dimen/detail_activity_small_text_margin"
                 android:layout_below="@+id/ingredients_text_tv"/>
 
             <TextView
@@ -129,9 +129,9 @@
                 android:id="@+id/description_text_tv"
                 android:layout_toRightOf="@+id/description_tv"
                 android:layout_toEndOf="@+id/description_tv"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginTop="@dimen/detail_activity_text_margin"
+                android:layout_marginStart="@dimen/detail_activity_text_margin"
+                android:layout_marginLeft="@dimen/detail_activity_text_margin"/>
 
 
 
